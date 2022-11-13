@@ -1,0 +1,64 @@
+
+
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static "css/home.css" %}">
+    <title>Home</title>
+    <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+</head>
+
+
+
+<body>
+    <div class="nav">
+        <center>
+            <h2>HEADER</h2>
+        </center>
+    </div>
+    <div class="contain">
+        <div id="table_grid">
+            <table id="table" cellpadding="3" cellspacing="5">
+                <tr id="GPHheader">
+                    <th>no</th>
+                    <th>X</th>
+                    <th>Y</th>
+                </tr>
+                {% for i in values %}
+                <tr><td>{{ i.index }}</td><td>{{i.X}}</td><td>{{i.Y}}</td><td><input value="edit" class="edit" type="button"></td></tr>
+                {% endfor %}
+                <tr id="UserInputs">
+                    <td></td>
+                    <td><input id="UserX" value="2" type="number" class="inptNum"></td>
+                    <td><input id="UserY" value="1" type="number" class="inptNum"></td>
+                    <td><input id="AddBtn" value="Add" type="button"></td>
+                </tr>
+            </table>
+            <form action="" method="POST">
+                {% csrf_token %}
+                <input id="hidden_numbers" type="text" name="hidden_numbers"><button>Save values</button>
+            </form>
+        </div>
+        <div id="grid_img">
+            <div id="GRPHbx"><img src="{{imgs}}" alt="File 2"> </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <center>
+            <h2>FOOTER</h2>
+        </center>
+    </div>
+    <script src="{% static "js/jquery-3.6.0.min.js" %}"></script>
+    <script src="{% static "js/home.js" %}"></script>
+</body>
+
+
+</html>

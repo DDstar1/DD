@@ -1,0 +1,79 @@
+.inptNum {
+    width: 4em;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+td {
+    text-align: center;
+    background-color: antiquewhite;
+}
+
+tr>td:first-child {
+    background-color: rgb(247, 243, 240);
+    padding: 0px;
+}
+
+#GPHheader {
+    background-color: rgb(250, 214, 167);
+}
+
+.nav {
+    width: 100%;
+    height: 40px;
+    background-color: beige;
+    margin-bottom: 20px;
+    margin-top: 0px;
+}
+
+.footer {
+    width: 100%;
+    height: 40px;
+    background-color: beige;
+    margin-bottom: 20px;
+}
+
+#GRPHbx {
+    padding: 10px;
+    width: 100%;
+    background-color: black;
+}
+
+#GRPHbx img {
+    margin: 0;
+    object-fit: cover;
+    width: 100%;
+}
+
+.contain {
+    position: relative;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    grid-gap: 10px;
+}
+
+#table_grid {
+    grid-column: 1 / 2;
+}
+
+#grid_img {
+    align-items: center;
+    grid-column: 2 / 3;
+}
+
+h2 {
+    margin: 0px;
+}
+
+button {
+    margin: 10px;
+}
+
+#hidden_numbers {
+    margin: 5px;
+}
